@@ -8,23 +8,24 @@ baseurl: ""            # the subpath of your site, e.g. /Minas-Math-Page
 url: "https://minabasilious.github.io"  # your GitHub Pages domain
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Build settings
+# Use Minimal Mistakes via remote_theme
 # ─────────────────────────────────────────────────────────────────────────────
-markdown: kramdown
-theme: minimal-mistakes-jekyll
+remote_theme: mmistakes/minimal-mistakes@4.24.0
 plugins:
+  - jekyll-remote-theme   # to fetch the remote theme
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-archives
 
 # ─────────────────────────────────────────────────────────────────────────────
-# MathJax support
+# Markdown & MathJax support
 # ─────────────────────────────────────────────────────────────────────────────
+markdown: kramdown
 kramdown:
+  input: GFM
   math_engine: mathjax
   syntax_highlighter: rouge
-  input: GFM
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Navigation (header links)
@@ -38,20 +39,20 @@ header_pages:
 # ─────────────────────────────────────────────────────────────────────────────
 footer:
   links:
-    - title: “Connect”
+    - title: "Connect"
       items:
-        - name: “LinkedIn”
+        - name: "LinkedIn"
           url: "https://www.linkedin.com/in/mina-basilious/"
-        - name: “Math Art Gallery”
+        - name: "Math Art Gallery"
           url: "https://minabasilious.github.io/Minas-Math-Art-Gallery/"
-        - name: “YouTube”
+        - name: "YouTube"
           url: "https://www.youtube.com/@minabasil"
   copyright:
     since: 2025
     author: "Mina Basilious Hanna Arsanious"
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Archives configuration (e.g. for talks, posts, projects)
+# Archives configuration (for categories & tags)
 # ─────────────────────────────────────────────────────────────────────────────
 jekyll_archives:
   enabled:
@@ -63,7 +64,7 @@ jekyll_archives:
     tag:      /tag/:name/
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Optional extras
+# Pagination
 # ─────────────────────────────────────────────────────────────────────────────
 paginate: 5
 paginate_path: "/page:num/"
