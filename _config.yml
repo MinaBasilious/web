@@ -1,0 +1,47 @@
+# _config.yml
+
+# Site settings
+title: “Mina Basilious Hanna Arsanious”
+email: "basiliousmina2@gmail.com"
+description: “Portfolio of current pure mathematics work”
+baseurl: ""        # the subpath of your site, e.g. /Minas-Math-Art-Gallery
+url: "https://minabasilious.github.io"  # your GitHub Pages URL
+
+# Build settings
+markdown: kramdown
+theme: minima       # you can swap for any supported Jekyll theme
+plugins:
+  - jekyll-feed     # optional RSS feed
+  - jekyll-seo-tag  # optional SEO tags
+
+# Author
+author:
+  name: “Mina Basilious Hanna Arsanious”
+  email: "basiliousmina2@gmail.com"
+
+# Navigation links (used in your layout)
+nav:
+  - title: “Home”
+    url: /
+  - title: “LinkedIn”
+    url: https://www.linkedin.com/in/mina-basilious/
+  - title: “Math Art”
+    url: https://minabasilious.github.io/Minas-Math-Art-Gallery/
+
+# Defaults for posts/pages
+defaults:
+  -
+    scope:
+      path: ""       # empty string means all files
+      type: "pages"
+    values:
+      layout: "default"
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+# Optional: set permalink style
+permalink: /:title/
