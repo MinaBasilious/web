@@ -1,48 +1,54 @@
-# _config.yml
-
 # Site settings
 title: “Mina Basilious Hanna Arsanious”
-email: "basiliousmina2@gmail.com"
-description: “Portfolio of current pure mathematics work”
-baseurl: ""        # the subpath of your site, e.g. /Minas-Math-Art-Gallery
-url: "https://minabasilious.github.io"  # your GitHub Pages URL
+description: “Pure Mathematics • Cairo University”
+url: "https://minabasilious.github.io" # your GitHub Pages URL
+baseurl: ""                            # set to "/" or "" if serving from root
 
-# Build settings
-markdown: kramdown
-theme: theme: jekyll-theme-minimal       # you can swap for any supported Jekyll theme
-plugins:
-  - jekyll-feed     # optional RSS feed
-  - jekyll-seo-tag  # optional SEO tags
+# Theme
+remote_theme: mmistakes/minimal-mistakes
+theme: minimal-mistakes-jekyll
 
 # Author
 author:
   name: “Mina Basilious Hanna Arsanious”
-  email: "basiliousmina2@gmail.com"
+  email: basiliousmina2@gmail.com
 
-# Navigation links (used in your layout)
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Navigation
 nav:
-  - title: “Home”
+  - title: Home
     url: /
-  - title: “LinkedIn”
-    url: https://www.linkedin.com/in/mina-basilious/
-  - title: “Math Art”
-    url: https://minabasilious.github.io/Minas-Math-Art-Gallery/
+  - title: Current Work
+    url: /current-work/
 
-# Defaults for posts/pages
+# Defaults
 defaults:
-  -
-    scope:
-      path: ""       # empty string means all files
-      type: "pages"
+  - scope:
+      path: ""
+      type: pages
     values:
-      layout: "default"
+      layout: single
+      author: “Mina Basilious Hanna Arsanious”
+      comments: false
 
-# Exclude from processing
+# Collections (for organizing any future math notes/projects)
+collections:
+  current-work:
+    output: true
+    permalink: /:collection/:path/
+
+# Markdown and syntax highlighting
+markdown: kramdown
+highlighter: rouge
+
+# Build settings
 exclude:
-  - README.md
   - Gemfile
   - Gemfile.lock
-
-# Optional: set permalink style
-permalink: /:title/
-
+  - node_modules
+  - vendor
