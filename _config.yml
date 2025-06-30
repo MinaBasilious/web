@@ -1,42 +1,34 @@
-# ─────────────────────────────────────────────────────────────────────────────
 # Site settings
-# ─────────────────────────────────────────────────────────────────────────────
 title: "Mina Basilious Hanna Arsanious"
 email: "basiliousmina2@gmail.com"
 description: "Pure Mathematics portfolio & ongoing research"
-baseurl: ""            # the subpath of your site, e.g. /Minas-Math-Page
-url: "https://minabasilious.github.io"  # your GitHub Pages domain
+baseurl: ""                       # e.g. /Minas-Math-Page
+url: "https://minabasilious.github.io"
 
-# ─────────────────────────────────────────────────────────────────────────────
-# Use Minimal Mistakes via remote_theme
-# ─────────────────────────────────────────────────────────────────────────────
-remote_theme: mmistakes/minimal-mistakes@4.24.0
+# Use Minimal Mistakes v4.1.1 (last version without include_cached)
+remote_theme: mmistakes/minimal-mistakes@4.1.1
+
+# Plugins
 plugins:
-  - jekyll-remote-theme   # to fetch the remote theme
+  - jekyll-remote-theme
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-archives
 
-# ─────────────────────────────────────────────────────────────────────────────
-# Markdown & MathJax support
-# ─────────────────────────────────────────────────────────────────────────────
+# Markdown & MathJax
 markdown: kramdown
 kramdown:
   input: GFM
   math_engine: mathjax
   syntax_highlighter: rouge
 
-# ─────────────────────────────────────────────────────────────────────────────
-# Navigation (header links)
-# ─────────────────────────────────────────────────────────────────────────────
+# Navigation
 header_pages:
   - index.md
   - about.md
 
-# ─────────────────────────────────────────────────────────────────────────────
-# Footer links & social
-# ─────────────────────────────────────────────────────────────────────────────
+# Footer & social
 footer:
   links:
     - title: "Connect"
@@ -51,23 +43,16 @@ footer:
     since: 2025
     author: "Mina Basilious Hanna Arsanious"
 
-# ─────────────────────────────────────────────────────────────────────────────
-# Archives configuration (for categories & tags)
-# ─────────────────────────────────────────────────────────────────────────────
+# Archives (categories & tags)
 jekyll_archives:
   enabled:
     - categories
     - tags
-  layout:   archive
+  layout: archive
   permalinks:
     category: /category/:name/
     tag:      /tag/:name/
 
-# ─────────────────────────────────────────────────────────────────────────────
 # Pagination
-# ─────────────────────────────────────────────────────────────────────────────
 paginate: 5
 paginate_path: "/page:num/"
-
-# Uncomment if you use Google Analytics
-# google_analytics: "UA-XXXXXX-1"
