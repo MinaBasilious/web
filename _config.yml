@@ -9,7 +9,7 @@ url: "https://minabasilious.github.io"  # your GitHub Pages URL
 
 # Build settings
 markdown: kramdown
-theme: minima       # you can swap for any supported Jekyll theme
+theme: theme: jekyll-theme-minimal       # you can swap for any supported Jekyll theme
 plugins:
   - jekyll-feed     # optional RSS feed
   - jekyll-seo-tag  # optional SEO tags
