@@ -1,58 +1,107 @@
-# Site settings
+###########################################################
+### Beautiful Jekyll _config.yml for Mina’s Math Portfolio
+###########################################################
+
+############################
+# --- Required options --- #
+############################
+
+# Name of website
 title: "Mina Basilious Hanna Arsanious"
-email: "basiliousmina2@gmail.com"
-description: "Pure Mathematics portfolio & ongoing research"
-baseurl: ""                       # e.g. /Minas-Math-Page
-url: "https://minabasilious.github.io"
 
-# Use Minimal Mistakes v4.1.1 (last version without include_cached)
-remote_theme: mmistakes/minimal-mistakes@4.1.1
+# Your name to show in the footer
+author: "Mina Basilious Hanna Arsanious"
 
-# Plugins
+###############################################
+# --- List of links in the navigation bar --- #
+###############################################
+
+navbar-links:
+  Home: "/"
+  LinkedIn: "https://www.linkedin.com/in/mina-basilious/"
+  "Math Art Gallery": "https://minabasilious.github.io/Minas-Math-Art-Gallery/"
+
+################
+# --- Logo --- #
+################
+
+# optional avatar; remove or update path if unused
+avatar: "/assets/img/avatar-icon.png"
+round-avatar: true
+
+#####################################
+# --- Footer social media links --- #
+#####################################
+
+social-network-links:
+  email: "basiliousmina2@gmail.com"
+  github: "minabasilious"
+  linkedin: "mina-basilious"
+  youtube: "@minabasil"
+
+rss-description: "Current pure mathematics work and projects"
+
+###########################
+# --- General options --- #
+###########################
+
+# Excerpt settings (not used heavily here)
+excerpt_length: 25
+feed_show_excerpt: false
+feed_show_tags: false
+
+# Search and edit links
+post_search: false
+edit_page_button: false
+
+# Show title on all pages
+title-on-all-pages: true
+
+######################################
+# --- Colours / background image --- #
+######################################
+
+page-col: "#FFFFFF"
+text-col: "#333333"
+link-col: "#0066CC"
+hover-col: "#0055AA"
+navbar-col: "#F8F8F8"
+navbar-text-col: "#333333"
+footer-col: "#F8F8F8"
+footer-text-col: "#555555"
+footer-link-col: "#0066CC"
+footer-hover-col: "#0055AA"
+
+####################
+# --- Comments --- #
+####################
+
+# no comments/disqus for this minimal portfolio
+#disqus: ""
+
+################
+# --- Misc --- #
+################
+
+timezone: "Africa/Cairo"
+date_format: "%B %-d, %Y"
+
+########################
+# --- Defaults --- #
+########################
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+########################
+# --- Plugins --- #
+########################
+
 plugins:
-  - jekyll-remote-theme
-  - jekyll-feed
-  - jekyll-seo-tag
+  - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-archives
-
-# Markdown & MathJax
-markdown: kramdown
-kramdown:
-  input: GFM
-  math_engine: mathjax
-  syntax_highlighter: rouge
-
-# Navigation
-header_pages:
-  - index.md
-  - about.md
-
-# Footer & social
-footer:
-  links:
-    - title: "Connect"
-      items:
-        - name: "LinkedIn"
-          url: "https://www.linkedin.com/in/mina-basilious/"
-        - name: "Math Art Gallery"
-          url: "https://minabasilious.github.io/Minas-Math-Art-Gallery/"
-        - name: "YouTube"
-          url: "https://www.youtube.com/@minabasil"
-  copyright:
-    since: 2025
-    author: "Mina Basilious Hanna Arsanious"
-
-# Archives (categories & tags)
-jekyll_archives:
-  enabled:
-    - categories
-    - tags
-  layout: archive
-  permalinks:
-    category: /category/:name/
-    tag:      /tag/:name/
-
-# Pagination
-paginate: 5
-paginate_path: "/page:num/"
